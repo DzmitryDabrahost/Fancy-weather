@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header__button">
+        <button class="button button__change"></button>
+          <div class="header__button__temp">
+            <button class="buttons button__cel active">C<sup>0</sup></button>
+            <button class="buttons button__far">F<sup>0</sup></button>
+          </div>
+        <select>
+          <option class="option" value="En" selected>En</option>
+          <option class="option" value="Ru">Ru</option>
+          <option class="option" value="Be">Be</option>
+        </select>
+      </div>
+      <div class="header__search">
+        <form id="form">
+          <input type="search" placeholder="Search City or ZIP">
+          <button class="button search__button">SEARCH</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <section class="weather__content">
+        <div class="weather__location">
+          <p class="weather__city"></p>
+          <p class="weather__date"><span class="date__today"></span><span class="time__today"></span></p>
+        </div>
+        <div class="weather__data">
+          <div class="weather__data__temp"></div>
+          <div class="weather__data__image"></div>
+          <div class="weather__data__another">
+            <p class="overcast"></p>
+            <p class="feelslike"></p>
+            <p class="wind"></p>
+            <p class="humidity"></p>
+          </div>
+          <div class="weather__day">
+            <div class="weather__tomorrow">
+              <p class="weather__tomorrow__nameday"></p>
+              <p class="weather__tomorrow__grad"></p>
+              <div class="weather__tomorrow__image"></div>
+            </div>
+            <div class="weather__tomorrow2">
+              <p class="weather__tomorrow2__nameday"></p>
+              <p class="weather__tomorrow2__grad">7</p>
+              <div class="weather__tomorrow2__image"></div>
+            </div>
+            <div class="weather__tomorrow3">
+              <p class="weather__tomorrow3__nameday"></p>
+              <p class="weather__tomorrow3__grad">8</p>
+              <div class="weather__tomorrow3__image"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="location__content">
+        <div id="map"></div>
+        <div class="location__latitude"></div>
+        <div class="location__longitude"></div>
+      </section>
+    </main>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
